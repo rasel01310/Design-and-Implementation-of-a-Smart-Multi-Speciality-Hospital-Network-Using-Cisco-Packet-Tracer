@@ -273,7 +273,7 @@ Smart-Hospital-Network-Project/
 1. Install [Cisco Packet Tracer](https://www.netacad.com/courses/packet-tracer) (version 9.x or later recommended).
 2. Clone this repository:
    ```
-   git clone https://github.com/<your-username>/Design-and-Implementation-of-a-Smart-Multi-Speciality-Hospital-Network.git
+   git clone https://github.com/rasel01310/Design-and-Implementation-of-a-Smart-Multi-Speciality-Hospital-Network-Using-Cisco-Packet-Tracer.git
    ```
 3. Open **`Computer Network Project.pkt`** in Cisco Packet Tracer.
 4. Switch to **Simulation Mode** to trace packet flow, or use CLI commands (`ping`, `show ip route`, `show ip nat translations`, etc.) on any device to verify connectivity.
