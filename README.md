@@ -71,6 +71,9 @@ Each site hosts multiple departments with distinct connectivity, addressing, and
      VLANs   VLANs  VLANs  VLANs  VLANs  VLANs       ← Department Segments
   (Servers, PCs, IP Phones, Printers, Wireless APs, Medical Devices)
 ```
+---
+<img width="970" height="520" alt="Screenshot 2026-08-20 093508" src="https://github.com/user-attachments/assets/5e27d51c-97af-4ed8-a991-f9eac45b77be" />
+
 
 **Design principle:** Every site follows an identical **Edge Router + Core Router** pattern —
 - **Edge Router** → handles the public-facing WAN link and NAT/PAT (security boundary)
