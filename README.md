@@ -127,8 +127,6 @@ Full subnet-by-subnet breakdown (network address, broadcast, usable range, gatew
 
 ## 🔀 VLAN Configuration
 
-<details>
-<summary><b>Click to expand full VLAN table</b></summary>
 
 | Site | VLAN ID | Name | Subnet | Prefix | Gateway | Usable Hosts |
 |---|---|---|---|---|---|---|
@@ -152,7 +150,7 @@ Full subnet-by-subnet breakdown (network address, broadcast, usable range, gatew
 | Children Care | 510 | ADMIN | 10.5.0.64 | /27 | 10.5.0.65 | 30 |
 | Children Care | 520 | WIFI | 10.5.0.128 | /27 | 10.5.0.129 | 30 |
 
-</details>
+
 
 ---
 
@@ -245,14 +243,14 @@ This repository uses a mostly flat structure, with one folder for screenshots:
 ```
 Smart-Hospital-Network-Project/
 ├── README.md
-├── Computer Network Project.pkt              ← Full Cisco Packet Tracer topology file
-├── Project Report.pdf                        ← Complete CSE322 lab project report
-├── Edge & Core Router IP Configuration.pdf   ← IP addressing for all Edge/Core routers
-├── ISP Router & ISP-Side Switch — VLAN...pdf ← R0 and ISP switch VLAN trunk configuration
-├── VLAN_Config_Report(All Branch).pdf        ← VLAN, DHCP, and switch config for all 6 sites
-├── Hospital_EIGRP_Config_Report(...).pdf     ← EIGRP configuration for all routers
-├── NAT_PAT Configuration Summary...pdf       ← NAT/PAT and ACL configuration for all Edge routers
-└── Screenshots/                              ← Topology, config, and verification test screenshots
+├── Computer Network Project.pkt                          ← Full Cisco Packet Tracer topology file
+├── Project Report.pdf                                    ← Complete CSE322 lab project report
+├── Edge & Core Router IP Configuration — WAN Links.pdf   ← IP addressing for all Edge/Core routers
+├── ISP Router & ISP-Side Switch — VLAN Configuration.pdf ← R0 and ISP switch VLAN trunk configuration
+├── VLAN_Config_Report(All Branch).pdf                    ← VLAN, DHCP, and switch config for all 6 sites
+├── Hospital_EIGRP_Config_Report(All Routers).pdf         ← EIGRP configuration for all routers
+├── NAT_PAT Configuration Summary.pdf                     ← NAT/PAT and ACL configuration for all Edge routers
+└── Screenshots/                                          ← Topology, config, and verification test screenshots
 ```
 
 | File / Folder | Contents |
@@ -272,7 +270,7 @@ Smart-Hospital-Network-Project/
 
 ## ▶️ How to Run This Project
 
-1. Install [Cisco Packet Tracer](https://www.netacad.com/courses/packet-tracer) (version 8.x or later recommended).
+1. Install [Cisco Packet Tracer](https://www.netacad.com/courses/packet-tracer) (version 9.x or later recommended).
 2. Clone this repository:
    ```
    git clone https://github.com/<your-username>/Design-and-Implementation-of-a-Smart-Multi-Speciality-Hospital-Network.git
@@ -318,7 +316,7 @@ Smart-Hospital-Network-Project/
 - **Course:** CSE322 — Computer Networks Lab
 - **Department:** Computer Science and Engineering (CSE)
 - **University:** Daffodil International University (DIU), Dhaka, Bangladesh
-- **Supervisor:** Mr. Tanvirul Islam, Lecturer, Dept. of CSE, DIU
+- **Supervisor:** **Mr. Tanvirul Islam**, Lecturer, Dept. of CSE, DIU
 
 ---
 
@@ -346,4 +344,3 @@ This project was developed for academic purposes as part of the CSE322 Computer 
 
 ---
 
-<p align="center">Made with ❤️ by the CSE322 project team at Daffodil International University</p>
