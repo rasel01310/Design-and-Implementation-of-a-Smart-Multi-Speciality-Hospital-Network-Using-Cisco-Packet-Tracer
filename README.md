@@ -72,10 +72,6 @@ Each site hosts multiple departments with distinct connectivity, addressing, and
   (Servers, PCs, IP Phones, Printers, Wireless APs, Medical Devices)
 ```
 
-
-<img width="970" height="520" alt="image" src="https://github.com/user-attachments/assets/73a7cdb1-2219-45f2-bb16-34727a891ba8" />
-
-
 **Design principle:** Every site follows an identical **Edge Router + Core Router** pattern —
 - **Edge Router** → handles the public-facing WAN link and NAT/PAT (security boundary)
 - **Core Router** → handles internal VLAN routing via Router-on-a-Stick sub-interfaces and DHCP
@@ -241,7 +237,7 @@ Full test case table with expected vs. actual results is available in **`Project
 
 ## 📁 Repository Structure
 
-This repository uses a flat structure — all files are in the root directory for simplicity:
+This repository uses a mostly flat structure, with one folder for screenshots:
 
 ```
 Smart-Hospital-Network-Project/
@@ -252,10 +248,11 @@ Smart-Hospital-Network-Project/
 ├── ISP Router & ISP-Side Switch — VLAN...pdf ← R0 and ISP switch VLAN trunk configuration
 ├── VLAN_Config_Report(All Branch).pdf        ← VLAN, DHCP, and switch config for all 6 sites
 ├── Hospital_EIGRP_Config_Report(...).pdf     ← EIGRP configuration for all routers
-└── NAT_PAT Configuration Summary...pdf       ← NAT/PAT and ACL configuration for all Edge routers
+├── NAT_PAT Configuration Summary...pdf       ← NAT/PAT and ACL configuration for all Edge routers
+└── Screenshots/                              ← Topology, config, and verification test screenshots
 ```
 
-| File | Contents |
+| File / Folder | Contents |
 |---|---|
 | `Computer Network Project.pkt` | Open this in Cisco Packet Tracer to explore/run the live topology |
 | `Project Report.pdf` | Full academic report — introduction, architecture, implementation, testing, conclusion |
@@ -264,14 +261,15 @@ Smart-Hospital-Network-Project/
 | `VLAN_Config_Report(All Branch).pdf` | Per-branch VLAN, switch port, and DHCP pool configuration |
 | `Hospital_EIGRP_Config_Report.pdf` | EIGRP AS 100 configuration for every router |
 | `NAT_PAT Configuration Summary.pdf` | NAT/PAT + extended ACL configuration for every Edge router |
+| `Screenshots/` | Full topology view, per-branch topology, CLI verification output (ping, `show ip route`, `show ip nat translations`, DHCP, EIGRP neighbors), and service test screenshots (DNS, HTTP, FTP, Email) |
 
-> Screenshots referenced throughout this README (topology diagrams, test outputs) are embedded directly inside `Project Report.pdf` rather than as separate image files.
+> **Why `Screenshots/` is named this way:** Capitalized to match the Title Case naming convention already used across this repo (`Project Report.pdf`, `Computer Network Project.pkt`). Keeping it as a single plural word avoids spaces/special characters in the path, which keeps GitHub links and relative Markdown image references (`![](Screenshots/topology.png)`) clean and easy to type.
 
 ---
 
 ## ▶️ How to Run This Project
 
-1. Install [Cisco Packet Tracer](https://www.netacad.com/courses/packet-tracer) (version 9.x or later recommended).
+1. Install [Cisco Packet Tracer](https://www.netacad.com/courses/packet-tracer) (version 8.x or later recommended).
 2. Clone this repository:
    ```
    git clone https://github.com/<your-username>/Design-and-Implementation-of-a-Smart-Multi-Speciality-Hospital-Network.git
@@ -317,7 +315,7 @@ Smart-Hospital-Network-Project/
 - **Course:** CSE322 — Computer Networks Lab
 - **Department:** Computer Science and Engineering (CSE)
 - **University:** Daffodil International University (DIU), Dhaka, Bangladesh
-- **Supervisor:** **Mr. Tanvirul Islam**, Lecturer, Dept. of CSE, DIU
+- **Supervisor:** Mr. Tanvirul Islam, Lecturer, Dept. of CSE, DIU
 
 ---
 
@@ -326,13 +324,16 @@ Smart-Hospital-Network-Project/
 1. Kurose, J. F., & Ross, K. W. (2021). *Computer Networking: A Top-Down Approach* (8th ed.). Pearson.
 2. Tanenbaum, A. S., & Wetherall, D. J. (2011). *Computer Networks* (5th ed.). Pearson.
 3. Stallings, W. (2017). *Data and Computer Communications* (10th ed.). Pearson.
-4. Cisco Networking Academy. *Introduction to Networks: Networking Fundamentals and Configuration*. Cisco Systems. [https://www.netacad.com](https://www.netacad.com)
-5. Cisco Systems. *Cisco IOS Configuration Guides and Command References*. [https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-15-2m-t/tsd-products-support-series-home.html](https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-15-2m-t/tsd-products-support-series-home.html)
-6. Cisco Systems. *Network Address Translation (NAT) Configuration Guide*. [https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipaddr_nat/configuration/xe-16/nat-xe-16-book.html](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipaddr_nat/configuration/xe-16/nat-xe-16-book.html)
-7. Cisco Systems. *VLAN and Inter-VLAN Routing Configuration Guide*. [https://www.cisco.com/c/en/us/support/docs/lan-switching/inter-vlan-routing/41860-howto-L3-intervlanrouting.html](https://www.cisco.com/c/en/us/support/docs/lan-switching/inter-vlan-routing/41860-howto-L3-intervlanrouting.html)
-8. Cisco Systems. *Dynamic Host Configuration Protocol (DHCP) Configuration Guide*. [https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipaddr_dhcp/configuration/xe-16/dhcp-xe-16-book.html](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipaddr_dhcp/configuration/xe-16/dhcp-xe-16-book.html)
-9. Cisco Systems. *IP Access Control Lists (ACLs) Configuration Guide*. [https://www.cisco.com/c/en/us/support/docs/ip/access-lists/26448-ACLsamples.html](https://www.cisco.com/c/en/us/support/docs/ip/access-lists/26448-ACLsamples.html)
-10. Cisco Systems. *EIGRP Configuration Guide*. [https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipenhigrp/configuration/xe-16/ire-xe-16-book.html](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipenhigrp/configuration/xe-16/ire-xe-16-book.html)
+4. Cisco Networking Academy. *Cisco Packet Tracer: Network Simulation and Visualization Tool*. Cisco Systems. Accessed: June 20, 2026; July 15, 2026; August 5, 2026.
+5. Cisco Networking Academy. *Introduction to Networks: Networking Fundamentals and Configuration*. Cisco Systems. Accessed: June 25, 2026; July 18, 2026; August 6, 2026.
+6. Cisco Systems. *Cisco IOS Configuration Guides and Command References*. Cisco Systems. Accessed: June 22, 2026; July 20, 2026; August 8, 2026.
+7. Cisco Systems. *Network Address Translation (NAT) Configuration Guide*. Cisco Systems. Accessed: July 5, 2026; July 25, 2026; August 10, 2026.
+8. Cisco Systems. *VLAN and Inter-VLAN Routing Configuration Guide*. Cisco Systems. Accessed: June 30, 2026; July 22, 2026; August 4, 2026.
+9. Cisco Systems. *Dynamic Host Configuration Protocol (DHCP) Configuration Guide*. Cisco Systems. Accessed: July 3, 2026; July 24, 2026; August 6, 2026.
+10. Cisco Systems. *IP Access Control Lists (ACLs) Configuration Guide*. Cisco Systems. Accessed: July 8, 2026; July 27, 2026; August 8, 2026.
+11. GeeksforGeeks. *Computer Network Tutorials*. Accessed: June 18, 2026; July 14, 2026; August 3, 2026.
+12. Cisco Networking Academy. *Networking Basics*. Cisco Systems. Accessed: June 24, 2026; July 19, 2026; August 9, 2026.
+13. OpenAI. (2026). *ChatGPT*. AI-assisted tool used for project documentation, report organization, language refinement, troubleshooting assistance, and technical explanation. Accessed: July 20, 2026; July 25, 2026; August 10, 2026.
 
 ---
 
@@ -342,3 +343,4 @@ This project was developed for academic purposes as part of the CSE322 Computer 
 
 ---
 
+<p align="center">Made with ❤️ by the CSE322 project team at Daffodil International University</p>
