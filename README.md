@@ -342,4 +342,3 @@ This project was developed for academic purposes as part of the CSE322 Computer 
 
 ---
 
-<p align="center">Made with ❤️ by the CSE322 project team at Daffodil International University</p>
