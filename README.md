@@ -49,6 +49,7 @@ Each site hosts multiple departments with distinct connectivity, addressing, and
 ## 🏗️ Network Architecture
 
 ```
+
                               INTERNET
                                  │
                           R0 (ISP Router)
@@ -56,7 +57,7 @@ Each site hosts multiple departments with distinct connectivity, addressing, and
                                  │
                           ISP Access Switch
                   (802.1Q trunk — 6 VLANs, 1 per branch link)
-        ┌──────┬──────┬──────┬──────┬──────┬──────┐
+        ┌──────┬──────┬──────┬──────┬──────┐
         │      │      │      │      │      │
        R1     R4     R6     R9     R11    R13        ← Edge Routers
      (HQ)  (Diag)  (Emer) (Tele) (Mat)  (Child)         (Public IP + NAT/PAT)
@@ -70,6 +71,7 @@ Each site hosts multiple departments with distinct connectivity, addressing, and
         │      │      │      │      │      │
      VLANs   VLANs  VLANs  VLANs  VLANs  VLANs       ← Department Segments
   (Servers, PCs, IP Phones, Printers, Wireless APs, Medical Devices)
+
 ```
 ---
 <img width="970" height="520" alt="Screenshot 2026-08-20 093508" src="https://github.com/user-attachments/assets/5e27d51c-97af-4ed8-a991-f9eac45b77be" />
